@@ -1,0 +1,18 @@
+{
+  "user": [
+    {
+      "id": "dafina",
+      "Fullname": "dafina aliji",
+      "email": "dafina1@gmail.com",
+      "password": "dafina123",
+      "phoneNumber": "049123"
+    },
+    {
+      "id": "dafina1",
+      "Fullname": "dafina a",
+      "email": "dafina@gmail.com",
+      "password": "dafina",
+      "phoneNumber": "0435"
+    }
+  ]
+}
