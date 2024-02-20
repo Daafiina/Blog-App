@@ -1,6 +1,7 @@
 import React from 'react';
 import { PencilIcon, TrashIcon } from '@heroicons/react/24/solid';
 import { Link } from 'react-router-dom';
+import uiIcon from '../../assets/menu.png'
 
 const BlogCard = ({ id, title, text, category, onDelete }) => {
   let lastPeriodIndex = text.lastIndexOf('.', 150);
@@ -15,7 +16,7 @@ const BlogCard = ({ id, title, text, category, onDelete }) => {
   };
 
   return (
-    <div className="max-w-xs pt-8 ml-16 mt-8 rounded overflow-hidden shadow-lg bg-white relative">
+    <div className="max-w-xs pt-8 ml-16 mt-8 rounded-lg overflow-hidden shadow-lg border border-gray-200 relative">
       <img
         className="w-full h-32 object-cover"
         src={`https://picsum.photos/250/250?random=${id}`}
@@ -26,7 +27,10 @@ const BlogCard = ({ id, title, text, category, onDelete }) => {
           <div className="font-bold text-lg mb-1 text-green-700 hover:text-green-900 cursor-pointer">
             {title}
           </div>
-          <div className="text-gray-500 text-sm mb-2">{category}</div>
+          <div className="flex items-center text-gray-500 text-sm mb-2">
+            <img src={uiIcon} alt="UI Icon" className="w-4 h-4 mr-1" /> {/* Display the UI icon */}
+            {category}
+          </div>
           <p className="text-gray-700 text-base">{truncatedText}</p>
         </div>
         <div className="absolute bottom-0 left-0 right-0 flex justify-center mb-4 space-x-2">
