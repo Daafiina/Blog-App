@@ -1,14 +1,17 @@
 import React from 'react';
 import { PencilIcon, TrashIcon } from '@heroicons/react/24/solid';
 import { Link } from 'react-router-dom';
-import uiIcon from '../../assets/menu.png'
+import uiIcon from '../../assets/menu.png';
 
 const BlogCard = ({ id, title, text, category, onDelete }) => {
-  let lastPeriodIndex = text.lastIndexOf('.', 150);
-  if (lastPeriodIndex === -1) {
-    lastPeriodIndex = 150;
+  let truncatedText = text || ''; // Initialize truncatedText with an empty string if text is undefined
+  if (text) {
+    let lastPeriodIndex = text.lastIndexOf('.', 150);
+    if (lastPeriodIndex === -1) {
+      lastPeriodIndex = 150;
+    }
+    truncatedText = text.substring(0, lastPeriodIndex + 1);
   }
-  const truncatedText = text.substring(0, lastPeriodIndex + 1);
 
   const handleDelete = () => {
     console.log("Deleting blog with ID:", id); 

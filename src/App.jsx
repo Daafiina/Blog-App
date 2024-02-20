@@ -29,7 +29,7 @@ function App() {
         <Header isLoggedIn={isLoggedIn} handleLogout={handleLogout} />
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
+          <Route path="/blogs" component={About} />
           <Route path="/blog-detail/:id" component={BlogDetail} />
           <Route path="/register" component={Register} />
           <Route path="/login" render={(props) => <Login {...props} handleLogin={handleLogin} />} />

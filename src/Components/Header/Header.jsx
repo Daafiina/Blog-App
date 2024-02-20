@@ -7,7 +7,7 @@ import { logout } from '../Login/Login';
 const Header = () => {
   const linksItem = [
     { path: '/', label: 'Home' },
-    { path: '/about', label: 'About' },
+    { path: '/blogs', label: 'Blogs' },
   ];
   const [open, setOpen] = useState(false);
 
