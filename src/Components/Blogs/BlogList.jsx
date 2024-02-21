@@ -48,16 +48,15 @@ const BlogList = () => {
             }
         })
         .then(data => {
-            // Generate a unique ID for the new post
-            const postId = Math.floor(Math.random() * 1000000); // Generate a random ID
+            const postId = data.id; 
             const formattedPost = {
                 id: postId,
                 title: newPost.title,
                 body: newPost.body,
                 tags: newPost.tags
             };
-            setData(prevData => [...prevData, formattedPost]); // Add the new post to the list
-            setNewPost({ title: '', body: '', tags: [] }); // Clear the new post form
+            setData(prevData => [...prevData, formattedPost]); 
+            setNewPost({ title: '', body: '', tags: [] }); 
         })
         .catch(error => console.error('Error:', error));
     };
