@@ -6,8 +6,12 @@ export default {
   ],
   theme: {
     extend: {
+      colors:{
+        primary:"#74cddf"
+      },
       fontFamily:{
-        "primary": ['Inter', 'sans-serif']
+        "primary": ['Inter', 'sans-serif'],
+        cursive: ["Ephesis","cursive"]
       }
     },
   },
