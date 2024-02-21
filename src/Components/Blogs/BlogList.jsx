@@ -114,10 +114,10 @@ const BlogList = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mb-4 lg:grid-cols-4 gap-4">
-  {filteredPosts.map((post, index) => (
-    <BlogCard key={index} id={post.id} title={post.title} text={post.body} category={post.tags?.[0]} onDelete={handleDelete} />
-  ))}
-</div>
+                {filteredPosts.map((post, index) => (
+            <BlogCard key={index} id={post.id} title={post.title} text={post.body} category={post.tags?.[0]} onDelete={handleDelete} />
+             ))}
+        </div>
         </div>
     );
 };
