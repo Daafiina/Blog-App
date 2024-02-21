@@ -8,6 +8,7 @@ import Login from './Components/Login/Login';
 import { ToastContainer } from 'react-toastify';
 import { useState } from 'react';
 import BlogList from './Components/Blogs/BlogList';
+import Footer from './Components/Footer/Footer';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
           <Route path="/register" component={Register} />
           <Route path="/login" render={(props) => <Login {...props} handleLogin={handleLogin} />} />
         </Switch>
+        <Footer/>
       </Router>
     </div>
   );
